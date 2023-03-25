@@ -11,27 +11,8 @@ function handleSubmitForm(event) {
     return alert("Всі поля повинні бути заповнені");
   }
 
-  console.log(`email: ${email.value}, password:  ${password.value}`);
+
+  console.log({ email: email.value, password: password.value  })
   email.value = "";
   password.value = "";
 }
-
-// ********************** Version two ***********************
-// function handleSubmitForm(event) {
-//     event.preventDefault();
-//     const {elements: {email, password}} = event.currentTarget;
-//     const formData = new FormData(event.currentTarget);
-
-//     formData.forEach((value) => {
-
-//     if(value === ""){
-//         return alert("Всі поля повинні бути заповнені")
-//     }})
-//     if(formEl.elements.email.value !== "" && formEl.elements.password.value !== "") {
-//         console.log(`email: ${email.value}, password:  ${password.value}`)
-//         email.value = "";
-//     password.value = "";
-
-//     }
-
-// };

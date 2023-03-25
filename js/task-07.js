@@ -2,7 +2,7 @@ const inputEl = document.querySelector("#font-size-control");
 
 const textInputEl = document.querySelector("#text");
 
-inputEl.addEventListener("mouseup", changeTextEl);
+inputEl.addEventListener("input", changeTextEl);
 
 inputEl.addEventListener("keydown", changeTextEl);
 
