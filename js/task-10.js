@@ -18,6 +18,7 @@ const controls = document.querySelector("#controls");
  createBtn.addEventListener("click", getValue)
 function getValue(event) {
  const currentInputvalue = event.currentTarget.previousElementSibling.value;
+
    if(Number(controls.firstElementChild.max) >= Number(event.currentTarget.previousElementSibling.value)){
     
     if(currentInputvalue !== "") {
@@ -32,14 +33,18 @@ function getValue(event) {
 
     for( let i = 0; i < amount ; i += 1){
       
-      if(i < amount){
+     
         const marcup = document.createElement("div");
+       
+        marcup.style.width = 20 + 10 * i + "px";
+        marcup.style.height = 20 + 10 * i + "px";
+       
         marcup.style.backgroundColor = getRandomHexColor();
-        marcup.style.width = "30px";
-        marcup.style.height = "30px";
-
+        
+       
+     
         boxesContainer.append(marcup)  
-      }
+    
       console.log(boxesContainer)
     }}
  
